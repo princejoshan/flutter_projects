@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todoapp/data/repositories/task_repository.dart';
 import 'package:todoapp/presentation/bloc/task_bloc.dart';
+import 'package:todoapp/presentation/screen/Ap_Future_Exp.dart';
+import 'package:todoapp/presentation/screen/future_builder_screen.dart';
+import 'package:todoapp/presentation/screen/silver_exp.dart';
+import 'package:todoapp/presentation/screen/stream_builder.dart';
 import 'package:todoapp/presentation/screen/task_screen.dart';
 import 'package:todoapp/utilities/appcolors.dart';
 
@@ -36,10 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: true,
       ),
-      home:  BlocProvider(
-        create: (context) => TaskBloc(TaskRepository()),
-        child: TaskPage(),
-      ),
+      home:  ApiExp()
     );
   }
 }
