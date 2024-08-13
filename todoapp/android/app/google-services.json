@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "512844032797",
+    "project_id": "fir-auth-3c440",
+    "storage_bucket": "fir-auth-3c440.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512844032797:android:242a91116d7e735bde0ff4",
+        "android_client_info": {
+          "package_name": "com.example.todoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGKkHvnLXm316ycfn60t2Q7GLhNp2DIz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
