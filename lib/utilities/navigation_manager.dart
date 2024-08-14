@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todoapp/repositories/user_repository.dart';
 import 'package:todoapp/view_model/loginbloc/login_bloc.dart';
 import 'package:todoapp/view_model/userbloc/user_bloc.dart';
-import 'package:todoapp/views/AddEditUserScreen.dart';
+import 'package:todoapp/views/addedituser_screen.dart';
 import 'package:todoapp/views/admin_home_screen.dart';
 import 'package:todoapp/views/login_screen.dart';
 import 'package:todoapp/views/signup_screen.dart';

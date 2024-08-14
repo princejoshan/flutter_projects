@@ -4,7 +4,6 @@ import 'package:todoapp/model/user_model.dart';
 import 'package:todoapp/utilities/app_enums.dart';
 import 'package:todoapp/utilities/buttonwidget.dart';
 import 'package:todoapp/utilities/loader.dart';
-import 'package:todoapp/view_model/loginbloc/login_bloc.dart';
 import 'package:todoapp/view_model/userbloc/user_bloc.dart';
 import 'package:todoapp/view_model/userbloc/user_event.dart';
 import 'package:todoapp/view_model/userbloc/user_state.dart';
@@ -12,7 +11,7 @@ import 'package:todoapp/view_model/userbloc/user_state.dart';
 class AddEditUserScreen extends StatefulWidget {
   final UserModel? selectedUserData;
 
-  AddEditUserScreen({super.key, this.selectedUserData});
+  const AddEditUserScreen({super.key, this.selectedUserData});
 
   @override
   State<AddEditUserScreen> createState() => _AddEditUserScreenState();

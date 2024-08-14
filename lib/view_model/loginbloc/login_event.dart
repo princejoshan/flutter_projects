@@ -1,4 +1,5 @@
-part of 'login_bloc.dart';
+
+import 'package:flutter/material.dart';
 
 @immutable
 sealed class LoginEvent {}

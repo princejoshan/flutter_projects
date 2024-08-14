@@ -1,16 +1,14 @@
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todoapp/model/user_model.dart';
 import 'package:todoapp/repositories/user_repository.dart';
 import 'package:todoapp/utilities/app_enums.dart';
+import 'package:todoapp/view_model/loginbloc/login_event.dart';
 
-part 'login_event.dart';
 
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  String _email = '';
-  String _password = '';
   final UserRepository userRepository;
 
   LoginBloc({required this.userRepository}) : super(LoginInitial()) {
@@ -29,11 +27,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   void _onEmailChanged(EmailChanged event, Emitter<LoginState> emit) {
-    _email = event.email;
   }
 
   void _onPasswordChanged(PasswordChanged event, Emitter<LoginState> emit) {
-    _password = event.password;
   }
 
   String? validateEmail(String email) {

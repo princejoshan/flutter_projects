@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:todoapp/model/user_model.dart';
 
 class UserRepository {
@@ -28,7 +29,9 @@ class UserRepository {
         'role': newRole,
       });
     } catch (e) {
-      print('Failed to update user role: $e');
+      if (kDebugMode) {
+        print('Failed to update user role: $e');
+      }
     }
   }
 
