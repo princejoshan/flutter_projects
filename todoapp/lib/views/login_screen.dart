@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:todoapp/services/firebase_analytics.dart';
 import 'package:todoapp/utilities/app_enums.dart';
 import 'package:todoapp/utilities/buttonwidget.dart';
 import 'package:todoapp/utilities/loader.dart';
@@ -20,6 +21,16 @@ class LoginScreen extends StatelessWidget {
         body: _getBody(context: context));
   }
 
+  setAnalyticsEvent() async {
+    await AnalyticsService().logEvent(
+      'button_click',
+      parameters: {'button_name': 'Login'},
+    );
+    // Set user properties
+    await AnalyticsService().setUserProperty('gender', 'male');
+    await AnalyticsService().setUserProperty('age', '25-34');
+  }
+
   Widget _getBody({required BuildContext context}) {
     return BlocListener<LoginBloc, LoginState>(
       listenWhen: (context, state) {
@@ -36,6 +47,7 @@ class LoginScreen extends StatelessWidget {
               var arg = {
                 'current_user':state.currentUser
               };
+              setAnalyticsEvent();
               Navigator.pushReplacementNamed(
                 arguments: arg,
                   context,
